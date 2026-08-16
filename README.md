@@ -178,5 +178,7 @@ Para conectar o Front-end à sua API local:
 
 ## 🤝 Créditos e Licença
 
-Desenvolvido para a **Oficina Integra SI**.
+Desenvolvido para a **Integra SI**.
+Carlos Henrique de Souza Santana Santiago
+João Guilherme Pinheiro Gonçalves
 Projeto sob a licença [ISC](LICENSE).
