@@ -4,7 +4,7 @@
   "description": "API REST para Gestão de Estoque desenvolvida na oficina de Node.js, TypeScript e MongoDB",
   "main": "dist/app.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --poll src/app.ts",
     "seed": "npx ts-node src/seed.ts",
     "build": "tsc",
     "start": "node dist/app.js"
