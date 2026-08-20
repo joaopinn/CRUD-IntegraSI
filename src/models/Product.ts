@@ -16,16 +16,21 @@ export interface IProductDocument extends Document {
 const productSchema = new Schema<IProductDocument>(
   {
     // TODO: Adicionar o campo 'name' (String, obrigatório, trim)
-    
+
+    name:{type: String, required: true, trim: true},
     // TODO: Adicionar o campo 'sku' (String, obrigatório, único, uppercase, trim)
-    
+    sku:{type: String, required: true, unique: true, uppercase: true, trim: true},
     // TODO: Adicionar o campo 'category' (String, obrigatório, enum com as categorias permitidas)
-    
+    category: {type: String, required: true,  enum: {
+        values: ["Eletrônicos", "Vestuário", "Alimentos", "Ferramentas", "Cosméticos"],
+        message: '{VALUE} não é categoria válida'
+      },},
     // TODO: Adicionar o campo 'quantity' (Number, obrigatório, min: 0, default: 0)
-    
+    quantity: {type: Number, required: true, min: 0, default: 0},
     // TODO: Adicionar o campo 'price' (Number, obrigatório, min: 0)
-    
+    price: {type: Number, required: true, min: 0},
     // TODO: Adicionar o campo 'minStock' (Number, obrigatório, min: 0, default: 0)
+    minStock: {type: Number, required: true, min: 0, default: 0}
   },
   {
     timestamps: true,
